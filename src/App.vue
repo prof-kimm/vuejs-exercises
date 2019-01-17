@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <button>No Colored</button>
+    <PlayGround/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PlayGround from './components/PlayGround/PlayGround'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    PlayGround
   }
 }
 </script>
