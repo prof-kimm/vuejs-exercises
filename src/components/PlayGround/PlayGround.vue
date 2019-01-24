@@ -2,27 +2,46 @@
   <div class="hello">
     <!-- v-bind -->
     <!-- v-bind shorthand-->
-    <!-- <div>Some Class With Background</div> -->
+    <div v-bind:class="backgroundClassName">Some Class With Background</div>
+
     <!-- v-on -->
-    <!-- v-on shorthand -->
-    <!-- <button>On Click</button> -->
+    <button v-on:click="handleClick">Click This</button>
+
     <!-- v-once -->
-    <!-- <span v-once>This will never change: {{ msg }}</span> -->
-    <!-- <div>Some Text Change</div> -->
+    <div v-once>the first message will never change: {{ message }}</div>
+    <div>the first message will never change: {{ message }}</div>
+
     <!-- v-html -->
-    <!-- <p>Using mustaches: {{ rawHtml }}</p> -->
-    <!-- <p>Using v-html directive: <span v-html="rawHtml"></span></p> -->
+    <div v-html="anchorTag"></div>
+
     <!-- v-model -->
-    <!-- <input type="text"> -->
+    <label for="firstName">First Name</label>
+    <!-- <input type="text" name="firstName" v-model="nameInput"> -->
+
     <!-- computed -->
-    <div>{{ reverseMessage }}</div>
-    <div>{{ reverseMessageNotCached() }}</div>
-    <!-- computed property will immediately return the previously computed result without having to run the function again. -->
+    <div>{{ message }} => reversed: {{ reversedMessage }}</div>
+
     <!-- watch -->
-    <p>Ask a yes/no question:
-      <input v-model="question">
-    </p>
-    <p>{{ answer }}</p>
+    <input type="text" name="firstName" v-model="nameInput">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- in-class -->
+    <!-- <input type="text" v-model="inputValue"> -->
+    <!-- <div class="length-display">{{inputValue.length}}</div> -->
 
   </div>
 </template>

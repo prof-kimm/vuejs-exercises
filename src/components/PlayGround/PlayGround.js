@@ -2,41 +2,36 @@ export default {
   name: "PlayGround",
   data() {
     return {
-      input: "",
-      message: "some random message",
-      noCacheMessage: "some random message",
-      question: '',
-      answer: 'I cannot give you an answer until you ask a question!',
+      backgroundClassName: "red-background",
+      counter: 0,
+      message: 'static message',
+      anchorTag: '<a href="http://google.ca">{{ message }}</a>',
+      nameInput: 'No Named',
     };
   },
   computed: {
-    reverseMessage() {
-      return this.noCacheMessage
-        .split("")
-        .reverse()
-        .join("");
-    }
+    reversedMessage() {
+      return this.message.split('').reverse().join('');
+    },
   },
   watch: {
-    question() {
-      this.answer = "Waiting for you to stop typing...";
-      setTimeout(() => {
-        this.answer = "time ran out!"; 
-      }, 4000);
-      // this.debouncedGetAnswer();
-    },
+    nameInput(newValue, oldValue) {
+    /* eslint-disable no-console */
+      console.log('old value: ', oldValue);
+      console.log('new value: ', newValue);
+    }
   },
   methods: {
-    handleChange(value) {
-      /* eslint-disable */
-      console.log("value", value);
+    handleClick() {
+      this.counter++;
+
+      // string interpolation
+      this.message = `you are clicking this ${this.counter} times!`
+      
+      // ternary operator
+      this.backgroundClassName = this.counter % 2 ? 'green-background' : 'red-background';
+
+      this.message = this.nameInput;
     },
-    reverseMessageNotCached() {
-      // this.noCacheMessage = 'changedCacheMessage'
-      return this.message
-        .split("")
-        .reverse()
-        .join("");
-    }
   }
 };
