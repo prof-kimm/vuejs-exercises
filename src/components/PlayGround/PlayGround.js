@@ -1,3 +1,14 @@
 export default {
-  name: "PlayGround"
+  name: "PlayGround",
+  data() {
+    return {
+      input: '',
+    }
+  },
+  methods: {
+    handleChange(value) {
+      /* eslint-disable */
+      console.log('value', value);
+    }
+  }
 };

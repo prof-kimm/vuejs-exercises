@@ -1,12 +1,11 @@
 <template>
   <div id="app">
-    <button>No Colored</button>
     <PlayGround/>
   </div>
 </template>
 
 <script>
-import PlayGround from './components/PlayGround/PlayGround'
+import PlayGround from './components/PlayGround/PlayGround.vue'
 
 export default {
   name: 'app',

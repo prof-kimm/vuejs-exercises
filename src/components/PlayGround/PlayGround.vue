@@ -1,7 +1,11 @@
 <template>
   <div class="hello">
-    <button>Click</button>
+    <el-input 
+      placeholder="Please input"
+      v-model="input"
+      @change="handleChange">
+    </el-input>
   </div>
 </template>
 <script src="./PlayGround.js"></script>
-<style src="./PlayGround.css" scoped></style>
+<style src="./PlayGround.css"></style>
