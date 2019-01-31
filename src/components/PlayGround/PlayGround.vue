@@ -24,6 +24,8 @@
     <!-- watch -->
     <input type="text" name="firstName" v-model="nameInput">
 
+    <!-- Element UI -->
+    <el-input placeholder="Please input" v-model="nameInput"></el-input>
 
 
 
